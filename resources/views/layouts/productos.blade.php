@@ -16,6 +16,7 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('plugins/select2/dist/css/select2.min.css')}}">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -88,6 +89,19 @@
             @yield('content')
         </main>
     </div>
-</body>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+
+<!-- jQuery 3 -->
+<script src="{{ asset('plugins/jquery/dist/jquery.min.js')}}"></script>
+<!-- Select2 -->
+<script src="{{ asset('plugins/select2/dist/js/select2.full.js')}}"></script>
+
+  <script type="text/javascript">
+    $('.select2').select2({
+      tags: true,
+    });
+</script>
+</body>
+
+  
 </html>

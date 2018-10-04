@@ -1,6 +1,7 @@
 @extends('layouts.productos')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -108,7 +109,19 @@
                                 @endif
                             </div>
                         </div>
-
+        {{-- *********************Palabras clave************************************ --}}
+                        <div class="form-group row">
+                            <label  class="col-md-4 col-form-label text-md-right">Palabras clave </label>
+                            <div class="col-md-6">
+                                <select name="tags[]" class="select2" multiple="multiple" data-placeholder="Seleccione una o varias Palabras" style="width: 100%;"> 
+                                  @foreach($tags as $tag)
+                                    <option {{ collect(old('tags'))->contains($tag->id) ? 'selected' : ''}} value="{{$tag->id}}">{{$tag->nombre}}</option>
+                                  @endforeach
+                                </select>
+                                <div class="text-danger">{!! $errors->first('tags','<span class="help-block">:message</span>') !!}
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary" >
@@ -122,4 +135,5 @@
         </div>
     </div>
 </div>
+
 @endsection

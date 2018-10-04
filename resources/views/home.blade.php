@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Bienvenido al Sistema Administrativo de FerrEléctricos Mi Rey
                 </div>
             </div>
         </div>
